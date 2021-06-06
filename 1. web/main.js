@@ -31,26 +31,24 @@ function showCircuit() {
 //---------------------------------------------------------
 
 function calculate() {
-    let HUN = 4.381;
-    let MON = 3.337;
-    let BEL = 7.004;
-    let ITA = 5.793;
+    
 
+  let palya = document.getElementById('circuit').value;
   let laptime = Number(document.getElementById('laptime').value) / 3600;
 
     $('#circuit').change(function (o) {
       switch (o.target.value) {
         case 'ITA':
-          document.getElementById('averagespeed').value = ITA / laptime;
+          document.getElementById('averagespeed').value = (5,793  / laptime).toString() + 'km/h';
         case 'HUN':
-          
+          document.getElementById('averagespeed').value = (3.337 / laptime).toString() + 'km/h';
         case 'BEL':
-         
+          document.getElementById('averagespeed').value = (7.004 / laptime).toString() + 'km/h';
         case 'MON':
-          
-
-        default:
-       
+          document.getElementById('averagespeed').value = (4.381 / laptime).toString() + 'km/h';
+        
+          default:
+            break;
       }
     });
   }
